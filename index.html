@@ -4,45 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Almoxarifado - Enfermagem</title>
+    <title>Controle de Almoxarifado</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <header>
-
-        <h1>Controle Inteligente de Almoxarifado</h1>
-
+        <h1>Controle de Almoxarifado</h1>
         <p>
-            Sistema de gerenciamento de materiais para aulas práticas de Enfermagem
+            Sistema para gerenciamento de materiais utilizados
+            nas aulas práticas do curso técnico de Enfermagem.
         </p>
-
     </header>
 
     <main class="container">
 
-        <section class="painel">
+        <section class="dashboard">
 
-            <div class="card-info">
-
-                <h3>Total de Materiais</h3>
-
-                <span id="total-materiais">
-                    0
-                </span>
-
+            <div class="card-dashboard">
+                <h3>Materiais Cadastrados</h3>
+                <span id="total-materiais">0</span>
             </div>
 
-            <div class="card-info">
-
+            <div class="card-dashboard">
                 <h3>Total em Estoque</h3>
-
-                <span id="total-estoque">
-                    0
-                </span>
-
+                <span id="total-estoque">0</span>
             </div>
 
         </section>
@@ -53,14 +41,18 @@
 
             <div id="mensagem"></div>
 
-            <label>Nome do Material</label>
+            <label for="input-nome">
+                Nome do Material
+            </label>
 
             <input
                 type="text"
                 id="input-nome"
                 placeholder="Ex: Luva de Procedimento">
 
-            <label>Quantidade</label>
+            <label for="input-quantidade">
+                Quantidade
+            </label>
 
             <input
                 type="number"
@@ -75,22 +67,19 @@
 
         <section class="card">
 
-            <h2>Materiais Cadastrados</h2>
+            <h2>Materiais em Estoque</h2>
 
             <table>
 
                 <thead>
-
                     <tr>
                         <th>ID</th>
                         <th>Material</th>
                         <th>Quantidade</th>
                     </tr>
-
                 </thead>
 
                 <tbody id="lista-materiais">
-
                 </tbody>
 
             </table>
@@ -100,12 +89,10 @@
     </main>
 
     <footer>
-
-        Sistema desenvolvido para o controle do almoxarifado de Enfermagem
-
+        Projeto desenvolvido para a avaliação final da disciplina.
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="main.js"></script>
 
 </body>
 
