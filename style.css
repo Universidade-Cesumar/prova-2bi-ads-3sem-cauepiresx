@@ -132,5 +132,18 @@ footer{
     .dashboard{
         flex-direction:column;
     }
+.btn-baixar,
+.btn-excluir{
+    width:auto;
+    margin:5px;
+    padding:8px 12px;
+}
+
+.btn-excluir{
+    background:#c0392b;
+}
+
+.btn-excluir:hover{
+    background:#922b21;
 
 }
