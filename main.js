@@ -88,6 +88,19 @@ async function cadastrarMaterial(){
 }
 
 function limparFormulario(){
+    function validarRetirada(estoqueAtual, quantidadeRetirada) {
+
+    if (quantidadeRetirada <= 0) {
+        return false;
+    }
+
+    if (quantidadeRetirada > estoqueAtual) {
+        return false;
+    }
+
+    return true;
+
+}
 
     document.getElementById("input-nome").value = "";
     document.getElementById("input-quantidade").value = "";
