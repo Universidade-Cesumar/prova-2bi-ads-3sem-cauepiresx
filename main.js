@@ -1,4 +1,4 @@
-const API_URL =
+ const API_URL =
 "https://ba2ef2e8c9776ca6c0c521f4.mockapi.io/api/v1/materiais";
 
 const btnCadastrar =
