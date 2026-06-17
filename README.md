@@ -1,51 +1,40 @@
-# Sistema de Controle de Almoxarifado
+# Controle de Almoxarifado
 
-## Descrição
-
-Aplicação web desenvolvida para auxiliar no controle de materiais utilizados nas aulas práticas do curso técnico de Enfermagem.
-
-O sistema substitui o controle manual realizado por planilhas eletrônicas, permitindo o cadastro e a consulta de materiais em tempo real por meio de integração com API REST.
-
----
-
-## Funcionalidades da Sprint 1
-
-- Cadastro de materiais.
-- Consulta automática dos materiais cadastrados.
-- Integração com MockAPI.
-- Atualização dinâmica da tabela.
-- Indicadores de estoque.
-
----
+Sistema web para gerenciamento de materiais utilizados nas aulas práticas do curso técnico de Enfermagem.
 
 ## Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
-- Fetch API
-- Async/Await
-- MockAPI.io
-- GitHub
+- MockAPI
 
----
+## Funcionalidades
 
-## Estrutura do Projeto
+### Sprint 1
 
-- index.html
-- style.css
-- main.js
-- README.md
-- package.json
+- Cadastro de materiais
+- Listagem de materiais
+- Dashboard com indicadores
 
----
+### Sprint 2
 
-## API Utilizada
+- Validação de retirada de estoque
+- Baixa de materiais via PUT
+- Exclusão de materiais via DELETE
+- Atualização automática da interface
 
-https://ba2ef2e8c9776ca6c0c521f4.mockapi.io/api/v1/materiais
+## Como Executar
 
----
+1. Clone o repositório.
+2. Abra a pasta no VS Code.
+3. Execute o arquivo index.html utilizando o Live Server.
+4. Utilize a aplicação normalmente.
+
+## API
+
+MockAPI utilizada para persistência dos dados do estoque.
 
 ## Autor
 
-Projeto acadêmico desenvolvido para a avaliação final da disciplina de Desenvolvimento Web.
+Projeto desenvolvido para atividade acadêmica da disciplina.
