@@ -140,11 +140,16 @@ function preencherTabela(materiais){
 
         lista.innerHTML += `
         <tr>
-            <td>${material.id}</td>
+           <td>${material.id}</td>
             <td>${material.nome}</td>
             <td>${material.quantidade}</td>
+            <td>
+                <button class="btn-baixar" data-id="${material.id}">Baixar</button>
+                <button class="btn-excluir" data-id="${material.id}">Excluir</button>
+            </td>
         </tr>
         `;
+       
 
     });
 
@@ -170,5 +175,5 @@ function atualizarIndicadores(materiais){
     ).textContent = totalEstoque;
 
 }
-
+    
 window.onload = carregarMateriais;
