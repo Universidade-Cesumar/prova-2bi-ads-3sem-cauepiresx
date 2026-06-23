@@ -1,4 +1,4 @@
- *{
+{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -146,4 +146,9 @@ footer{
 .btn-excluir:hover{
     background:#922b21;
 
+}
+.estoque-critico{
+    background-color:#ffe5e5;
+    color:#c0392b;
+    font-weight:bold;
 }
