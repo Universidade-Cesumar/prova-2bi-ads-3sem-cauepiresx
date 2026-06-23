@@ -3,12 +3,19 @@
 
 const btnCadastrar =
 document.getElementById("btn-cadastrar");
+const inputBusca =
+document.getElementById("input-busca");
+
+let materiaisGlobais = [];
 
 btnCadastrar.addEventListener(
     "click",
     cadastrarMaterial
 );
-
+inputBusca.addEventListener(
+    "input",
+    filtrarMateriais
+);
 function validarRetirada(
     estoqueAtual,
     quantidadeRetirada
@@ -123,6 +130,8 @@ async function carregarMateriais(){
         const materiais =
         await resposta.json();
 
+        materiaisGlobais = materiais;
+
         preencherTabela(materiais);
 
         atualizarIndicadores(materiais);
@@ -147,7 +156,11 @@ function preencherTabela(materiais){
     materiais.forEach(material => {
 
         lista.innerHTML += `
-        <tr>
+        <tr class="${
+         Number(material.quantidade) < 10
+         ? 'estoque-critico'
+         : ''
+         }">
             <td>${material.id}</td>
             <td>${material.nome}</td>
             <td>${material.quantidade}</td>
@@ -305,7 +318,12 @@ function atualizarIndicadores(materiais){
         "total-materiais"
     ).textContent =
     materiais.length;
-
+    
+    document.getElementById(
+        "total-itens"
+    ).textContent =
+    materiais.length;
+    
     let totalEstoque = 0;
 
     materiais.forEach(material => {
@@ -324,3 +342,23 @@ function atualizarIndicadores(materiais){
 
 window.onload =
 carregarMateriais;
+function filtrarMateriais(){
+
+    const termo =
+    document
+    .getElementById("input-busca")
+    .value
+    .toLowerCase();
+
+    const filtrados =
+    materiaisGlobais.filter(material =>
+
+        material.nome
+        .toLowerCase()
+        .includes(termo)
+
+    );
+
+    preencherTabela(filtrados);
+
+}
